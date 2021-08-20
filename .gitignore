@@ -43,3 +43,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Vs code Workspace file
+eGrocery_Angular_App_workspace.code-workspace
