@@ -18,7 +18,7 @@ ul {padding-left: 0;}
 section+section { margin-top: 50px; }
 
 .block-heading {
-	background-image: url("D:/RouteeProj/routeproj/src/assets/titleBorder.png");
+	background-image: url("/src/assets/titleBorder.png");
 	background-repeat: repeat-x;
 	height: 20px;
 	margin: 60px 0;
@@ -45,7 +45,7 @@ section+section { margin-top: 50px; }
 	right: 30px;
 	display: block;
 	text-align: center;
-	background: url("D:/RouteeProj/routeproj/src/assets/top.png") no-repeat;
+	background: url("/src/assets/top.png") no-repeat;
 }
 
 
@@ -99,7 +99,7 @@ header {
 }
 .search-box button {
 	height: 25px;
-	background: url("D:/RouteeProj/routeproj/src/assets/search.png") no-repeat;
+	background: url("/src/assets/search.png") no-repeat;
 	background-color: #fff;
 	padding:10px 16px;
 	background-position: 8px;
@@ -336,11 +336,11 @@ header {
 	background-repeat: no-repeat;
 }
 .nivo-prevNav {
-	background: url("D:/RouteeProj/routeproj/src/assets/large_left.png");
+	background: url("/src/assets/large_left.png");
 	margin-left: -60px;
 }
 .nivo-nextNav {
-	background: url("D:/RouteeProj/routeproj/src/assets/large_right.png");
+	background: url("/src/assets/large_right.png");
 	margin-right: -60px;
 }
 .nivo-prevNav:hover {
@@ -457,7 +457,7 @@ header {
 
 .products-heading {
 	margin-top: 20px;
-	background: url("D:/RouteeProj/routeproj/src/assets/titleBorder.png");
+	background: url("/src/assets/titleBorder.png");
 	background-repeat: repeat-x;
 }
 .products-heading h2 {
