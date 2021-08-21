@@ -1,0 +1,85 @@
+<style>
+    h1 {
+     text-align: center;
+   }
+   textarea {
+     width: 100%;
+     height: 150px;
+     padding: 12px 20px;
+     box-sizing: border-box;
+     border: 2px solid rgb(226, 21, 21);
+     border-radius: 4px;
+     background-color: #f8f8f8;
+     resize: none;
+   }
+   
+   
+     body {font-family: Arial, Helvetica, sans-serif;}
+     * {box-sizing: border-box;}
+     
+     input[type=text], select, textarea {
+       width: 100%;
+       padding: 12px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       box-sizing: border-box;
+       margin-top: 6px;
+       margin-bottom: 16px;
+       resize: vertical;
+     }
+     
+     input[type=submit] {
+       background-color: #aa3304;
+       color: white;
+       padding: 12px 20px;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+     }
+     
+     input[type=submit]:hover {
+       background-color: #1631c9;
+     }
+     
+     .container {
+       border-radius: 5px;
+       background-color: #f2f2f2;
+       padding: 20px;
+     }
+     </style>
+     
+     <body>
+     
+     <h1>Product Information</h1>
+     
+     <div class="container">
+       <form #simpleForm="ngForm"(ngSubmit)="getValues(simpleForm.value)">
+         <label for="productname"> ProductName</label>
+         <input type="text" id="name" ngModel name="productname" placeholder="product name">
+     
+         <label for="Price">Price</label>
+         <input type="text" id="Price" ngModel name="Product price" placeholder="Product price">
+     
+         <label for="product description">Product Description</label>
+         <textarea id="subject" ngModel name="subject" placeholder="About Product" style="height:200px"></textarea>
+        
+         <label for="Seller">Seller</label>
+         <input type="text" id="Seller" ngModel name="Seller " placeholder="Seller Name">
+   
+         <label for="Review">Review</label>
+         <input type="text" id="Seller" ngModel name="Review " placeholder="Review">
+     
+         <form action="/action_page.php">
+           <label for="img">Browse image:</label>
+           <input type="file" id="img" ngModel name="img" accept="image/*">
+          
+         </form>
+         
+         <p><strong>Note:</strong> please check image before adding</p>
+   <br><br>
+   
+         <input type="submit" value="Submit">
+       </form>
+     </div>
+     
+     </body>
