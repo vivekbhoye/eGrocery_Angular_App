@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { AddcartComponent } from './addcart/addcart.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { CheckitemsComponent } from './checkitems/checkitems.component';
+import { ProductinfoComponent } from './productinfo/productinfo.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,7 +19,9 @@ const routes: Routes = [
     { path: 'contactus', component:ContactusComponent},
   { path: 'aboutus', component: AboutusComponent },
     {path: 'login',component:LoginComponent},
-    {path: 'registration',component:RegistrationComponent}
+    {path: 'registration',component:RegistrationComponent},
+    {path:'checkitems',component:CheckitemsComponent},
+    {path:'productinfo',component:ProductinfoComponent}
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
@@ -34,6 +38,8 @@ export const routingComponents = [
   
   ContactusComponent,
   LoginComponent,
-  RegistrationComponent
+  RegistrationComponent,
+  CheckitemsComponent,
+  ProductinfoComponent
   
 ];

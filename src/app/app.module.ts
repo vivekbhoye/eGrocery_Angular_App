@@ -11,6 +11,8 @@ import { AddcartComponent } from './addcart/addcart.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
+import { CheckitemsComponent } from './checkitems/checkitems.component';
+import { ProductinfoComponent } from './productinfo/productinfo.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { RegistrationComponent } from './registration/registration.component';
     AddcartComponent,
     LoginComponent,
     RegistrationComponent,
+    CheckitemsComponent,
+    ProductinfoComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule,FormsModule],
