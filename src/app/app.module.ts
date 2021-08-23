@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProductinfoComponent } from './productinfo/productinfo.component';
     RegistrationComponent,
     CheckitemsComponent,
     ProductinfoComponent,
+    ProductsComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule,FormsModule],
