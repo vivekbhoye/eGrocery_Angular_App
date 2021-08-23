@@ -15,6 +15,9 @@ import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
+import { ProductsComponent } from './products/products.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { ProductserviceService } from './productservice.service';
     RegistrationComponent,
     CheckitemsComponent,
     ProductinfoComponent,
+    ProductsComponent,
     
   ],
   imports: [
