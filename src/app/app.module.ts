@@ -13,8 +13,12 @@ import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
+=======
+import { ProductsComponent } from './products/products.component';
+>>>>>>> d58d6eeb4d2dbe337d28bd59effbbb76cad14795
 
 @NgModule({
   declarations: [
@@ -25,6 +29,7 @@ import { ProductserviceService } from './productservice.service';
     RegistrationComponent,
     CheckitemsComponent,
     ProductinfoComponent,
+    ProductsComponent,
     
   ],
   imports: [
