@@ -13,12 +13,13 @@ import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductserviceService } from './productservice.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    
     AddcartComponent,
     LoginComponent,
     RegistrationComponent,
@@ -26,8 +27,12 @@ import { ProductinfoComponent } from './productinfo/productinfo.component';
     ProductinfoComponent,
     
   ],
-  imports: [BrowserModule, AppRoutingModule,FormsModule],
-  providers: [],
+  imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      FormsModule],
+  providers: [ProductserviceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

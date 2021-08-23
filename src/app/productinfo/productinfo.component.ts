@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ProductserviceService } from '../productservice.service';
 
 @Component({
   selector: 'app-productinfo',
@@ -6,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productinfo.component.css']
 })
 export class ProductinfoComponent implements OnInit {
+  @Input()
+  productDetails = {
+    product_Name: '',
+    product_Category: '',
+    product_img: '',
+    product_Price: '',
+    product_Review: '',
+    product_Description: ''
+  }
 
-  constructor() { }
+  constructor(public resturl :ProductserviceService, public router : Router) { }
 
   ngOnInit(): void {
   }
@@ -15,4 +26,10 @@ export class ProductinfoComponent implements OnInit {
     console.warn(val)
   }
 
+  addProduct(){
+    this.resturl.addProduct(this.productDetails).subscribe((data:{} )=>{
+      this.router.navigate(['/home']);
+    })
+
+  }
 }
