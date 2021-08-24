@@ -1,12 +1,13 @@
-<div class=" jumbotron-text-center" style="margin-bottom: 0">
-  <h1><i>E-GROCERY 
-  </i></h1>
-</div>
+<link rel="stylesheet" href="D:\RouteeProj\routeproj\src\app\app.component.css">
+
+
 
 
 <section id="top">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Egrocery</a>
+  
+  <a class="navbar-brand" href="#">E-grocery</a>
+  
   <button
     class="navbar-toggler"
     type="button"
@@ -18,9 +19,9 @@
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav ms-auto">
       <li class="nav-item active">
         <a class="nav-link" routerLink="/home" routerLinkActive="active"
           >Home <span class="sr-only"></span
@@ -60,9 +61,20 @@
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/addcart" routerLinkActive="active"
-          >Mycart</a
+        <a class="nav-link" routerLink="/payment" routerLinkActive="active"
+          ></a
         >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/addcart" routerLinkActive="active"
+          ><div class="cart_icon">
+            <i class="fa fa-shopping-cart"></i>
+            <div class="cart_value">
+              {{cartItem}}
+            </div>
+          </div></a
+        >
+        
       </li>
     </ul>
   </div>

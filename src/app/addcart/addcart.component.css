@@ -1,25 +1,27 @@
-.card {
-    height:60vh;
-    margin:25px;
-    padding: 25px;
-    }
-    .center{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        text-align:center;
-    }
-    
-    .center img{
-        text-decoration: none;
-        color: inherit;
-        border: none;
-        outline:none;
-        height:162px;
-        width:250px;
-        margin:20px 0px;
-    }
-    h1,h6{
-        font-weight:400;
-    }
+.btn{
+    background:red;
+    border-radius:50%;
+    font-size:16px;
+    color:rgb(221, 208, 208);
+    margin:0 8px;
+}
+.content span{
+    font-weight: 800;
+    font-size:18px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color:green;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

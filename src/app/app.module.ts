@@ -14,6 +14,16 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 
+<<<<<<< HEAD
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { ProductserviceService } from './productservice.service';
+import { ProductsComponent } from './products/products.component';
+
+import { PaymentComponent } from './payment/payment.component';
+
+
+>>>>>>> master
 import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
 import { ProductsComponent } from './products/products.component';
@@ -23,6 +33,10 @@ import { ProductupdateComponent } from './productupdate/productupdate.component'
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
 @NgModule({
   declarations: [
@@ -34,8 +48,12 @@ import { ProductupdateComponent } from './productupdate/productupdate.component'
     CheckitemsComponent,
     ProductinfoComponent,
     ProductsComponent,
+<<<<<<< HEAD
     ProductlistComponent,
     ProductupdateComponent,
+=======
+    PaymentComponent,
+>>>>>>> master
     
   ],
   imports: [
