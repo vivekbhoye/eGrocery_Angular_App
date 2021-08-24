@@ -11,11 +11,19 @@ import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { ProductsComponent } from './products/products.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductupdateComponent } from './productupdate/productupdate.component';
 =======
 import { PaymentComponent } from './payment/payment.component';
 >>>>>>> master
+=======
+
+import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductupdateComponent } from './productupdate/productupdate.component';
+
+import { PaymentComponent } from './payment/payment.component';
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,6 +31,10 @@ const routes: Routes = [
   { path: 'contactus', component: ContactusComponent },
   { path: 'aboutus', component: AboutusComponent },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'checkitems', component: CheckitemsComponent },
@@ -31,7 +43,11 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'productlist', component:ProductlistComponent  },
   { path: 'productupdate/:product_Id', component:ProductupdateComponent  },
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
     {path: 'login',component:LoginComponent},
     {path: 'registration',component:RegistrationComponent},
     {path:'checkitems',component:CheckitemsComponent},
@@ -39,7 +55,10 @@ const routes: Routes = [
     {path:'addcart',component:AddcartComponent},
     {path:'products',component:ProductsComponent},
     {path:'payment',component:PaymentComponent}
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
@@ -60,9 +79,17 @@ export const routingComponents = [
   AddcartComponent,
   ProductsComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
   PaymentComponent
   
 ];
 >>>>>>> master
+=======
+
+];
+  PaymentComponent
+  
+];
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9

@@ -15,7 +15,12 @@ import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
 import { ProductsComponent } from './products/products.component';
@@ -23,7 +28,11 @@ import { ProductsComponent } from './products/products.component';
 import { PaymentComponent } from './payment/payment.component';
 
 
+<<<<<<< HEAD
 >>>>>>> master
+=======
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
 import { ProductsComponent } from './products/products.component';
@@ -34,9 +43,15 @@ import { ProductupdateComponent } from './productupdate/productupdate.component'
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> master
+=======
+
+
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 
 @NgModule({
   declarations: [
@@ -49,11 +64,20 @@ import { ProductupdateComponent } from './productupdate/productupdate.component'
     ProductinfoComponent,
     ProductsComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ProductlistComponent,
     ProductupdateComponent,
 =======
     PaymentComponent,
 >>>>>>> master
+=======
+
+    ProductlistComponent,
+    ProductupdateComponent,
+
+    PaymentComponent,
+r
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
     
   ],
   imports: [

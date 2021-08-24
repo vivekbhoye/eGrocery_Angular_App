@@ -1,12 +1,22 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductinfoComponent } from '../productinfo/productinfo.component';
 import { ProductserviceService } from '../productservice.service';
 =======
 import { AuthService } from '../_service/auth.service';
 >>>>>>> master
+=======
+
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProductinfoComponent } from '../productinfo/productinfo.component';
+import { ProductserviceService } from '../productservice.service';
+
+import { AuthService } from '../_service/auth.service';
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 
 @Component({
   selector: 'products',
@@ -15,6 +25,10 @@ import { AuthService } from '../_service/auth.service';
 })
 export class ProductsComponent implements OnInit {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
   fakepath_url!: string;
   products: any = [];
   constructor(
@@ -22,11 +36,19 @@ export class ProductsComponent implements OnInit {
     public aroute : ActivatedRoute,
     public restApi : ProductserviceService
   ) { }
+<<<<<<< HEAD
 =======
   cartDataNull: undefined;
 
   constructor(private auth:AuthService) { }
 >>>>>>> master
+=======
+
+  cartDataNull: undefined;
+
+  constructor(private auth:AuthService) { }
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 
   ngOnInit(): void {
     this.loadProducts();
@@ -39,12 +61,20 @@ export class ProductsComponent implements OnInit {
       .subscribe((data) => (this.products = data));
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 
     
  
 
   
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
   
   productArray=[
     
@@ -125,7 +155,11 @@ qnt:1
   }
 
 
+<<<<<<< HEAD
 >>>>>>> master
+=======
+
+>>>>>>> e1e349f6a0e3eb56cda032b9651b057c654b57a9
 }
 
 
