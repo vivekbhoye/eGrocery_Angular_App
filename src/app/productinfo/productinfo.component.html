@@ -111,16 +111,16 @@
         placeholder="Review"
       />
 
-      <form action="/action_page.php">
+      <form >
         <label for="img">Browse image:</label>
         <input
           type="file"
-          id="img"
+          id="yourFileInput"
           [(ngModel)]="productDetails.product_img"
-
-          name="img"
-          accept="image/*"
-        />
+          
+          >
+          <img [src]="url">
+        
       </form>
 
       <p><strong>Note:</strong> please check image before adding</p>
@@ -129,4 +129,6 @@
       <input type="submit" (click)="addProduct()" value="Submit" />
     </form>
   </div>
+
+
 </body>

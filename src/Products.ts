@@ -5,7 +5,7 @@ export interface Products{
     product_Price:number;
     product_Review:string;
     product_Description:string;
-    product_img: File;
+    product_img: string;
 }
 // cart:null;
 // seller:null;
