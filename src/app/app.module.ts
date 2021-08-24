@@ -14,6 +14,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 
+
+
 import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
 import { ProductsComponent } from './products/products.component';
@@ -21,9 +23,16 @@ import { ProductsComponent } from './products/products.component';
 import { PaymentComponent } from './payment/payment.component';
 
 
+
 import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
 import { ProductsComponent } from './products/products.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductupdateComponent } from './productupdate/productupdate.component';
+
+
+
+
 
 
 
@@ -38,7 +47,12 @@ import { ProductsComponent } from './products/products.component';
     CheckitemsComponent,
     ProductinfoComponent,
     ProductsComponent,
+
+    ProductlistComponent,
+    ProductupdateComponent,
+
     PaymentComponent,
+r
     
   ],
   imports: [

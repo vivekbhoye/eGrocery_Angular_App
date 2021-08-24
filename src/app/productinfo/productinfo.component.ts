@@ -8,6 +8,7 @@ import { ProductserviceService } from '../productservice.service';
   styleUrls: ['./productinfo.component.css']
 })
 export class ProductinfoComponent implements OnInit {
+  [x: string]: any;
   @Input()
   productDetails = {
     product_Name: '',
@@ -28,8 +29,32 @@ export class ProductinfoComponent implements OnInit {
 
   addProduct(){
     this.resturl.addProduct(this.productDetails).subscribe((data:{} )=>{
-      this.router.navigate(['/home']);
+      this.router.navigate(['/products']);
     })
 
   }
+  
+  http: any;
+
+// onFileUpload(event:any ){
+//   document.getElementById("yourFileInput");
+// this.selectedFile = event.target.files[0];
+// }
+// OnUploadFile() {
+// //Upload file here send a binary data
+// this.http.post('src/assets/Products_Images', this.selectedFile)
+// .subscribe();
+// }
+
+// readUrl(event:any) {
+//   if (event.target.files && event.target.files[0]) {
+//     var reader = new FileReader();
+
+//     reader.onload = (event: ProgressEvent) => {
+//       this.url = (<FileReader>event.target).result;
+//     }
+
+//     reader.readAsDataURL(event.target.files[0]);
+//   }
+// }
 }

@@ -1,5 +1,12 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
+
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProductinfoComponent } from '../productinfo/productinfo.component';
+import { ProductserviceService } from '../productservice.service';
+
 import { AuthService } from '../_service/auth.service';
+
 
 @Component({
   selector: 'products',
@@ -7,17 +14,37 @@ import { AuthService } from '../_service/auth.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+
+  fakepath_url!: string;
+  products: any = [];
+  constructor(
+    public router : Router,
+    public aroute : ActivatedRoute,
+    public restApi : ProductserviceService
+  ) { }
+
   cartDataNull: undefined;
 
   constructor(private auth:AuthService) { }
 
+
   ngOnInit(): void {
+    this.loadProducts();
   }
-  url:string="../assets/g1.jpg";
-  changeImage(event:any){
-    this.url= event.target.src;
+  
+
+  loadProducts(){
+    return this.restApi
+      .getProducts()
+      .subscribe((data) => (this.products = data));
+  }
+
+
     
-  }
+ 
+
+  
+
   
   productArray=[
     
@@ -96,6 +123,7 @@ qnt:1
     this.auth.cartSubject.next(this.cartNumber);
     
   }
+
 
 
 }

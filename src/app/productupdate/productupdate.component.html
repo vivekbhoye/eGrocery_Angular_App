@@ -1,0 +1,138 @@
+<p>productupdate works!</p>
+<style>
+    h1 {
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid rgb(226, 21, 21);
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+    }
+  
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+  
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+  
+    input[type="submit"] {
+      background-color: #aa3304;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #1631c9;
+    }
+  
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+</style>
+  
+  <body>
+    <h1>Update Product </h1>
+    {{ productData.product_Name }}
+    <div class="container">
+        <form>
+        <label for="productname"> Product Name</label>
+        <input
+          type="text"
+          id="productname"
+          [(ngModel)]="productData.product_Name"
+          name="product_Name"
+          placeholder="product name"
+        />
+          {{ productData.product_Name }}
+        <label for="category"> Product Category</label>
+        <input
+          type="text"
+          id="category"
+          [(ngModel)]="productData.product_Category"
+          name="product_Category"
+          placeholder="product category"
+        />
+  
+        <label for="Price">Price</label>
+        <input
+          type="text"
+          id="Price"
+          [(ngModel)]="productData.product_Price"
+          name="product_Price"
+          placeholder="Product price"
+        />
+  
+        <label for="product_Description">Product Description</label>
+        <textarea
+          id="product_Description"
+          [(ngModel)]="productData.product_Description"
+          name="product_Description"
+          placeholder="About Product"
+          style="height: 200px"
+        ></textarea>
+  
+        <label for="Seller">Seller</label>
+        <input
+          type="text"
+          id="Seller"
+          name="Seller "
+          placeholder="Seller Name"
+        />
+  
+        <label for="Review">Review</label>
+        <input
+          type="text"
+          id="Review"
+          [(ngModel)]="productData.product_Review"
+          name="product_Review "
+          placeholder="Review"
+        />
+  
+        <form action="/action_page.php">
+          <label for="img">Browse image:</label>
+          <input
+            type="file"
+            id="img"
+            [(ngModel)]="productData.product_img"
+            name="product_img"
+            accept="image/*"
+          />
+        </form>
+  
+        <p><strong>Note:</strong> please check image before adding</p>
+        <br /><br />
+        <!-- <input type="submit" (click)="updateProduct()" class="btn btn-primary" /> -->
+        
+        <div class="form-group">
+          <button type="submit" (click)="updateProduct()" class="btn btn-primary">
+            UPDATE Product
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+  

@@ -8,6 +8,10 @@ import { AuthService } from './_service/auth.service';
 })
 export class AppComponent {
   title = 'routeproj';
+
+
+
+
   constructor(private auth:AuthService){
     this.auth.cartSubject.subscribe((data)=>{
       this.cartItem=data;
@@ -26,4 +30,5 @@ export class AppComponent {
     }
 
   }
+
 }
