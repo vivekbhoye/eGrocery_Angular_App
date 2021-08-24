@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.css";
 .jumbotron-text-center{
- background-color: rgb(81, 255, 0);
+ 
  text-align: center;
 }
 

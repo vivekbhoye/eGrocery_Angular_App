@@ -11,6 +11,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { ProductsComponent } from './products/products.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
     {path:'checkitems',component:CheckitemsComponent},
     {path:'productinfo',component:ProductinfoComponent},
     {path:'addcart',component:AddcartComponent},
-    {path:'products',component:ProductsComponent}
+    {path:'products',component:ProductsComponent},
+    {path:'payment',component:PaymentComponent}
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
@@ -45,6 +47,7 @@ export const routingComponents = [
   CheckitemsComponent,
   ProductinfoComponent,
   AddcartComponent,
-  ProductsComponent
+  ProductsComponent,
+  PaymentComponent
   
 ];

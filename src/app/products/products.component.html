@@ -1,299 +1,58 @@
-<section class="bg-color">
+<style>
+    input[type=submit] {
+      background-color: #aa3304;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #1631c9;
+    }
+    .cart_btn{
+        background-color: #04AA6D;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+    }
+    .btn{
+    background:red;
+    border-radius:50%;
+    font-size:16px;
+    color:rgb(221, 208, 208);
+    margin:0 8px;
+}
+  </style>
+<section class="product">
     <div class="containers">
       <div class ="title">
         <p> Our Available Products</p>
           <h1><span>Best</span> Seller</h1>
       </div>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="assets\g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="assets\g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="assets\g1.jpg" alt="product"></div>
-              
+      <div class="container text-center">
+          <div class="col-md-3" *ngFor="let prod of productArray">
+            <div class="product-image">
+              <img src="{{prod.img}}" alt="P1">
              </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
+             <div class="content">
+                 <h4>RS {{prod.amt}}</h4>
+                 <button type="button" class="btn" (click)="inc(prod)"><i class="fa fa-plus"></i></button>
+                 <span>{{prod.qnt}}</span>
+                 <button type="button" class="btn"(click)="dec(prod)"><i class="fa fa-minus"></i></button>
              </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-             </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
-             </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-             </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
-             </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-             </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
-             </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-             </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
-             </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-             </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
-             </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-             </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
-             </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <div class="discount">9%</div>
-             <div class="label label-green">Pre-Order</div>
-             <div class="product-container">
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-               <div class="p" (mouseover)="changeImage($event)"><img src="../assets/g1.jpg" alt="product"></div>
-             </div>
-             <div class="image">
-               <img src="{{url}}" alt="Image">
-             </div>
-             <div class="cart-line"></div>
-             <div class="cart-item">
-               <ul>
-                 <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-                 <li><a href=""><i class="fa fa-heart"></i></a></li>
-                 <li><a href=""><i class="fa fa-search"></i></a></li>
-               </ul>
-             </div>
-            </div>
-            <div class="content">
-              <a href=""> Bar </a><br><br>
-              <input type="submit" value="ADD TO CART">
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p> <span class="money">INR 100.</span><br> <br> <span class="old-price">INR 150</span></p>
-            </div>
-          </div>
-        </div>
+             <button type="button" class="cart_btn" (click)="addCart(prod)">Add To Cart</button>
+           </div>
       </div>
       </div>
+      
+       
+        
+            
   </section>
