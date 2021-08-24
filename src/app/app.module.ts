@@ -13,15 +13,25 @@ import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ProductserviceService } from './productservice.service';
 import { ProductsComponent } from './products/products.component';
+
 import { PaymentComponent } from './payment/payment.component';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { ProductserviceService } from './productservice.service';
+import { ProductsComponent } from './products/products.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    
     AddcartComponent,
     LoginComponent,
     RegistrationComponent,
@@ -31,8 +41,12 @@ import { PaymentComponent } from './payment/payment.component';
     PaymentComponent,
     
   ],
-  imports: [BrowserModule, AppRoutingModule,FormsModule],
-  providers: [],
+  imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      FormsModule],
+  providers: [ProductserviceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
