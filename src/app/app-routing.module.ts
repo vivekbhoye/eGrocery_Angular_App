@@ -57,8 +57,6 @@ export const routingComponents = [
   ProductinfoComponent,
   AddcartComponent,
   ProductsComponent,
-
-];
   PaymentComponent
   
 ];
