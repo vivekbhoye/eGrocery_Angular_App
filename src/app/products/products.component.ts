@@ -13,8 +13,9 @@ import { AuthService } from '../_service/auth.service';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  fakepath_url!: string;
+  
   products: any = [];
+
   constructor(
     public router: Router,
     public aroute: ActivatedRoute,
@@ -36,19 +37,19 @@ export class ProductsComponent implements OnInit {
 
   productArray = [
     {
-      prodId: 1,
+      product_Id: 1,
       img: '../assets/g1.jpg',
       amt: 500,
       qnt: 1,
     },
     {
-      prodId: 2,
+      product_Id: 2,
       img: '../assets/g1.jpg',
       amt: 800,
       qnt: 1,
     },
     {
-      prodId: 3,
+      product_Id: 3,
       img: '../assets/logo.png',
       amt: 800,
       qnt: 1,
@@ -67,7 +68,7 @@ export class ProductsComponent implements OnInit {
     }
   }
   itemsCart: any = [];
-  addCart(category: { prodId: any; qnt: any }) {
+  addCart(category: { product_Id: any; qnt: any }) {
     console.log(category);
     let cartDataNull = localStorage.getItem('localCart');
     if (cartDataNull == null) {
@@ -75,16 +76,19 @@ export class ProductsComponent implements OnInit {
       storeDataGet.push(category);
       localStorage.setItem('localCart', JSON.stringify(storeDataGet));
     } else {
-      var id = category.prodId;
+      var id = category.product_Id;
+      console.log(id);
       let index: number = -1;
       this.itemsCart = JSON.parse(localStorage.getItem('localCart') || '[]');
+      console.log(this.itemsCart);
       for (let i = 0; i < this.itemsCart.length; i++) {
-        if (parseInt(id) === parseInt(this.itemsCart[i].prodId)) {
+        if (parseInt(id) === parseInt(this.itemsCart[i].product_Id)) {
           this.itemsCart[i].qnt = category.qnt;
           index = i;
           break;
         }
       }
+      console.log(this.itemsCart);
       if (index == -1) {
         this.itemsCart.push(category);
         localStorage.setItem('localCart', JSON.stringify(this.itemsCart));

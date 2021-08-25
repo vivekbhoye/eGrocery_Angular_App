@@ -9,6 +9,7 @@ import { ProductserviceService } from '../productservice.service';
 })
 export class ProductinfoComponent implements OnInit {
   [x: string]: any;
+
   @Input()
   productDetails = {
     product_Name: '',
@@ -31,9 +32,7 @@ export class ProductinfoComponent implements OnInit {
     this.resturl.addProduct(this.productDetails).subscribe((data:{} )=>{
       this.router.navigate(['/products']);
     })
-
   }
-  
   http: any;
 
 // onFileUpload(event:any ){
