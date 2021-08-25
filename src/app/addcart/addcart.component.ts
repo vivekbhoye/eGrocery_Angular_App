@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartserviceService } from '../cartservice.service';
 import { ProductserviceService } from '../productservice.service';
 import { AuthService } from '../_service/auth.service';
 
@@ -8,19 +10,45 @@ import { AuthService } from '../_service/auth.service';
   styleUrls: ['./addcart.component.css']
 })
 export class AddcartComponent implements OnInit {
-  constructor(private auth:AuthService,public restApi: ProductserviceService){}
+  constructor(
+    private auth:AuthService,
+    public restApi: ProductserviceService, 
+    public resturl: CartserviceService,
+    public router : Router){}
   products: any = [];
+  
+  @Input()
+  cartDetails = {
+    products:{
+      product_Name: '',
+      product_Price: ''
+  
+    }
+  }
 
   ngOnInit(): void {
     this.loadProducts();
     this.CartDetails();
     this.loadCart();
   }
+  getValues(val:any){
+    console.warn(val)
+  }
   loadProducts() {
     return this.restApi
       .getProducts()
       .subscribe((data) => (this.products = data));
   }
+
+  addcart(){
+    this.resturl.addCart(this.CartDetails).subscribe((data:{} ) =>{
+      this.router.navigate(['/home']);
+    })
+  }
+
+
+
+
   getCartDetails:any=[];
   
   CartDetails(){
