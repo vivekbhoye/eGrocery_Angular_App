@@ -14,6 +14,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { ProductsComponent } from './products/products.component';
+import { PaymentComponent } from './payment/payment.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { ProductsComponent } from './products/products.component';
     CheckitemsComponent,
     ProductinfoComponent,
     ProductsComponent,
+    PaymentComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule,FormsModule],
