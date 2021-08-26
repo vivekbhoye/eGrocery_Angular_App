@@ -300,3 +300,33 @@ input[type=submit] {
     color: rgb(221, 208, 208);
     margin: 0 8px;
   }
+  input[type=submit] {
+    background-color: #aa3304;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #1631c9;
+  }
+  .cart_btn{
+      background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .btn{
+  background:red;
+  border-radius:50%;
+  font-size:16px;
+  color:rgb(221, 208, 208);
+  margin:0 8px;
+}
