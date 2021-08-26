@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="D:\RouteeProj\routeproj\src\app\app.component.css">
+
+
+
+
+<section id="top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="#">E-grocery</a>
+  
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active"
+          >Home <span class="sr-only"></span
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/aboutus" routerLinkActive="active"
+          >About Us</a
+        >
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus" routerLinkActive="active"
+          >contactus
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active"
+          >login
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/productinfo" routerLinkActive="active"
+          >productinfo
+        </a>
+
+      </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/products" routerLinkActive="active"
+          >Products</a
+        >
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/productlist" routerLinkActive="active"
+          >Products List</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/payment" routerLinkActive="active"
+          ></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/addcart" routerLinkActive="active"
+          ><div class="cart_icon">
+            <i class="fa fa-shopping-cart"></i>
+            <div class="cart_value">
+              {{cartItem}}
+            </div>
+          </div></a
+        >
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+
+<router-outlet></router-outlet>
