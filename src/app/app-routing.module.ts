@@ -11,7 +11,10 @@ import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { ProductsComponent } from './products/products.component';
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductupdateComponent } from './productupdate/productupdate.component';
 
@@ -63,4 +66,7 @@ export const routingComponents = [
   PaymentComponent
   
 ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
