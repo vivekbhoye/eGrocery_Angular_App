@@ -4,7 +4,5 @@ export interface Payment{
     Address:string;
     city:number;
     state:string;
-    zip:number;
     nameOnCard: string;
-    CardNumber:number;
 }

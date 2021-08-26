@@ -35,8 +35,10 @@ export class PaymentComponent implements OnInit {
 
   addProduct(){
     this.resturl.savePayment(this.paymentDetails).subscribe((data:{} )=>{
+      window.alert("Payment is successful! And order will be delivered by today.")
       this.router.navigate(['/home']);
     })
+
   }
 
 }

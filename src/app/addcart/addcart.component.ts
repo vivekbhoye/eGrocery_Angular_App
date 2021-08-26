@@ -116,7 +116,12 @@ export class AddcartComponent implements OnInit {
     this.cartNumber=cartValue.length;
     this.auth.cartSubject.next(this.cartNumber);
   }
+
   cartDetails= {
+    no_Of_Items: (JSON.parse(localStorage.getItem('localCart')||'[]')).length,
+    total_Amount:(JSON.parse(localStorage.getItem('localCart')||'[]')).reduce(function(acc: any,val: any){
+      return acc+(val.product_Price);
+    },0),
     products: JSON.parse(localStorage.getItem('localCart')||'[]')  
   }
 }
