@@ -1,4 +1,44 @@
 
+<style>
+    input[type=submit] {
+      background-color: #aa3304;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #1631c9;
+    }
+    .cart_btn{
+        background-color: #04AA6D;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+    }
+    .btn{
+    background:red;
+    border-radius:50%;
+    font-size:16px;
+    color:rgb(221, 208, 208);
+    margin:0 8px;
+}
+  </style>
+<section class="product">
+    <div class="containers">
+      <div class ="title">
+        <p> Our Available Products</p>
+          <h1><span>Best</span> Seller</h1>
+      </div>
+
+
 
 <section class="product">
   <div class="containers">
@@ -65,6 +105,27 @@
   </div>
 </section>
 
+      <div class="container text-center">
+          <div class="col-md-3" *ngFor="let prod of productArray">
+            <div class="product-image">
+              <img src="{{prod.img}}" alt="P1">
+             </div>
+             <div class="content">
+                 <h4>RS {{prod.amt}}</h4>
+                 <button type="button" class="btn" (click)="inc(prod)"><i class="fa fa-plus"></i></button>
+                 <span>{{prod.qnt}}</span>
+                 <button type="button" class="btn"(click)="dec(prod)"><i class="fa fa-minus"></i></button>
+             </div>
+             <button type="button" class="cart_btn" (click)="addCart(prod)">Add To Cart</button>
+           </div>
+      </div>
+      </div>
+      
+       
+        
+            
+  </section>
+
 <section>
   <div class="container text-center">
     <div class="title">
@@ -94,3 +155,4 @@
     </div>
   </div>
 </section>
+
