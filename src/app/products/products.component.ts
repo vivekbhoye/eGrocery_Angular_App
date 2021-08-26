@@ -1,11 +1,17 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductinfoComponent } from '../productinfo/productinfo.component';
 import { ProductserviceService } from '../productservice.service';
 
 import { AuthService } from '../_service/auth.service';
+
 
 @Component({
   selector: 'products',
@@ -13,7 +19,13 @@ import { AuthService } from '../_service/auth.service';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
+<<<<<<< HEAD
   
+=======
+
+  fakepath_url!: string;
+
+>>>>>>> master
   products: any = [];
 
   constructor(
@@ -22,12 +34,27 @@ export class ProductsComponent implements OnInit {
     public restApi: ProductserviceService,
     private auth: AuthService
   ) {}
+<<<<<<< HEAD
 
   cartDataNull: undefined;
+=======
+
+  cartDataNull: undefined;
+
+>>>>>>> master
 
   ngOnInit(): void {
     this.loadProducts();
   }
+<<<<<<< HEAD
+=======
+
+  loadProducts() {
+    return this.restApi
+      .getProducts()
+      .subscribe((data) => (this.products = data));
+  }
+>>>>>>> master
 
   loadProducts() {
     return this.restApi
@@ -35,6 +62,10 @@ export class ProductsComponent implements OnInit {
       .subscribe((data) => (this.products = data));
   }
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> master
   productArray = [
     {
       product_Id: 1,
@@ -68,6 +99,10 @@ export class ProductsComponent implements OnInit {
     }
   }
   itemsCart: any = [];
+<<<<<<< HEAD
+=======
+  
+>>>>>>> master
   addCart(category: { product_Id: any; qnt: any }) {
     console.log(category);
     let cartDataNull = localStorage.getItem('localCart');
@@ -105,4 +140,8 @@ export class ProductsComponent implements OnInit {
     this.cartNumber = cartValue.length;
     this.auth.cartSubject.next(this.cartNumber);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 }

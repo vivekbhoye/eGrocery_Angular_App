@@ -15,8 +15,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductserviceService } from './productservice.service';
 import { ProductsComponent } from './products/products.component';
 import { PaymentComponent } from './payment/payment.component';
+<<<<<<< HEAD
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductupdateComponent } from './productupdate/productupdate.component';
+=======
+
+import { HttpClientModule } from '@angular/common/http';
+import { ProductserviceService } from './productservice.service';
+import { ProductsComponent } from './products/products.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductupdateComponent } from './productupdate/productupdate.component';
+
+>>>>>>> master
 
 
 @NgModule({
@@ -29,9 +39,14 @@ import { ProductupdateComponent } from './productupdate/productupdate.component'
     CheckitemsComponent,
     ProductinfoComponent,
     ProductsComponent,
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     ProductlistComponent,
     ProductupdateComponent,
     PaymentComponent,
+
     
   ],
   imports: [

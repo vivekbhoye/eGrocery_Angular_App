@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
+=======
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Cart } from 'src/Cart';
+import { CartserviceService } from '../cartservice.service';
+>>>>>>> master
 import { ProductserviceService } from '../productservice.service';
 import { AuthService } from '../_service/auth.service';
 
@@ -8,14 +15,29 @@ import { AuthService } from '../_service/auth.service';
   styleUrls: ['./addcart.component.css']
 })
 export class AddcartComponent implements OnInit {
+<<<<<<< HEAD
   constructor(private auth:AuthService,public restApi: ProductserviceService){}
   products: any = [];
 
   ngOnInit(): void {
     this.loadProducts();
+=======
+  constructor(
+    private auth:AuthService,
+    public restApi: ProductserviceService, 
+    public resturl: CartserviceService,
+    public router : Router){}
+  products: any = [];
+  // cart!: Cart;
+  
+  ngOnInit(): void {
+    // this.loadProducts();
+>>>>>>> master
     this.CartDetails();
     this.loadCart();
+    console.log(this.getCartDetails);
   }
+<<<<<<< HEAD
   loadProducts() {
     return this.restApi
       .getProducts()
@@ -41,6 +63,54 @@ export class AddcartComponent implements OnInit {
     this.loadCart();
   }
   decQnt(product_Id: any,qnt: any){
+=======
+  getValues(val:any){
+    console.warn(val)
+  }
+  loadProducts() {
+    return this.restApi
+    .getProducts()
+    .subscribe((data) => (this.products = data));
+  }
+  addcart(){
+    this.resturl.addCart(this.cartDetails).subscribe((data:{} ) =>{
+      this.router.navigate(['/payment']);
+    })
+    // console.log("sa "+this.getCartDetails[0]);
+    this.removeall();
+  }
+  
+  // checkout(){
+    //   this.resturl.checkout(this.getCartDetails[0]).subscribe((data:{} ) =>{
+
+      // }
+      
+      
+      
+      getCartDetails:any=[];
+      
+      
+      CartDetails(){
+        if(localStorage.getItem('localCart')){
+          this.getCartDetails=JSON.parse(localStorage.getItem('localCart')||'[]');
+          console.log(this.getCartDetails);
+          console.log("ss");
+          console.log(this.cartDetails);
+          // console.log(this.getCartDetails.product_Id);
+        }
+      }
+      incQnt(product_Id: any,qnt: any){
+        for(let i=0;i<this.getCartDetails.length;i++){
+          if(this.getCartDetails[i].product_Id===product_Id){
+            if(qnt!=5)
+            this.getCartDetails[i].qnt=parseInt(qnt)+1;
+          }
+        }
+        localStorage.setItem('localCart',JSON.stringify(this.getCartDetails));
+        this.loadCart();
+      }
+      decQnt(product_Id: any,qnt: any){
+>>>>>>> master
     for(let i=0;i<this.getCartDetails.length;i++){
       if(this.getCartDetails[i].product_Id===product_Id){
         if(qnt!=1)
@@ -86,5 +156,8 @@ export class AddcartComponent implements OnInit {
     this.cartNumber=cartValue.length;
     this.auth.cartSubject.next(this.cartNumber);
   }
+  cartDetails= {
+    products: JSON.parse(localStorage.getItem('localCart')||'[]')  
   }
-  
+}
+

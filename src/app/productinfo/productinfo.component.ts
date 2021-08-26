@@ -20,7 +20,9 @@ export class ProductinfoComponent implements OnInit {
     product_Description: ''
   }
 
-  constructor(public resturl :ProductserviceService, public router : Router) { }
+  constructor(
+    public resturl :ProductserviceService, 
+    public router : Router) { }
 
   ngOnInit(): void {
   }
