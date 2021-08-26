@@ -31,6 +31,35 @@ export class ProductserviceService {
         .pipe(retry(1), catchError(this.handleError));
   }
 
+  getProducts(): Observable<Products>{
+    return this.http
+      .get<Products>(this.resturl + '/allProducts')
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
+  getAProduct(product_Id:any): Observable<Products>{
+    return this.http
+      .get<Products>(this.resturl + '/search/' + product_Id)
+      .pipe(retry(1),catchError(this.handleError));
+  }
+
+  updateProduct(product:any): Observable<Products>{
+    return this.http
+      .put<Products>(
+        this.resturl + '/updateProduct',
+        JSON.stringify(product),
+        this.httpOptions
+        )
+      .pipe(retry(1),catchError(this.handleError));
+  }
+
+  deleteProduct(product_Id:any):Observable<Products>{
+    return this.http
+      .delete<Products>(this.resturl + '/deleteProduct/' + product_Id,
+      this.httpOptions)
+      .pipe(retry(1),catchError(this.handleError));
+  }
+
 
   handleError(err: any) {
     let errorMessage = '';

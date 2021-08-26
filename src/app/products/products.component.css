@@ -6,6 +6,13 @@ font-family:'Roboto', sans-serif;
 
 }
 
+img {
+	max-width:150px;
+max-height:100%;
+height: auto;
+width:auto;
+}
+
 .containers
 {
     width:90%;
