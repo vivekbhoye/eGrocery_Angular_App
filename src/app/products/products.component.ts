@@ -68,6 +68,7 @@ export class ProductsComponent implements OnInit {
     }
   }
   itemsCart: any = [];
+  
   addCart(category: { product_Id: any; qnt: any }) {
     console.log(category);
     let cartDataNull = localStorage.getItem('localCart');

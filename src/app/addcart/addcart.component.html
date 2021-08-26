@@ -11,15 +11,16 @@
           </tr>
           <tr *ngFor="let getCartDetail of getCartDetails">
             <td>
-              <!-- <img
+              <img
                 src="assets\Products_Images\{{ getCartDetail.product_img }}"
-                alt="P1"
-                ngDefaultControl
-                [(ngModel)]="cartDetails.products.product_img"  
+                alt="P1"  
                 name="product_img"
-              /> -->
+              />
             </td>
             <td><p name="product_Name" ngDefaultControl [(ngModel)]="cartDetails.products.product_Name"  >Rs {{ getCartDetail.product_Price }}</p></td>
+            <!-- {{ cartDetails | json}}
+            {{ getCartDetail | json}} -->
+            
             <td>
               <button
                 type="button"
@@ -47,10 +48,9 @@
           UPDATE Product
         </button>
       </div>
-
+<!-- 
       <a href="/payment" style="color: black">
-        <button id="btnn">CheckOut</button></a
-      >
+        <button id="btnn">CheckOut</button></a> -->
     </div>
   </form>
 </section>

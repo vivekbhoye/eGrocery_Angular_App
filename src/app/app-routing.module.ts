@@ -17,6 +17,7 @@ import { ProductupdateComponent } from './productupdate/productupdate.component'
 import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'addcart', component: AddcartComponent },
   { path: 'contactus', component: ContactusComponent },

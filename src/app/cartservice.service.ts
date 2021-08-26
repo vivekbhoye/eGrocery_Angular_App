@@ -21,9 +21,9 @@ export class CartserviceService {
     }),
   };
 
-  addCart(cart:any):Observable<Cart>{
+  addCart(cart:any){
     return this.http
-      .post<Cart>(
+      .post(
         this.resturl + '/createCart',
         JSON.stringify(cart),
         this.httpOptions
@@ -31,6 +31,9 @@ export class CartserviceService {
       .pipe(retry(1),catchError(this.handleError));
   }
 
+  checkout(product_Id:number){
+    return this.http
+      .get(this.resturl + '/createCart?${product_Id}')}
 
   handleError(err: any) {
     let errorMessage = '';

@@ -7,5 +7,3 @@ export interface Products{
     product_Description:string;
     product_img: string;
 }
-// cart:null;
-// seller:null;
