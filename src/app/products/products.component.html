@@ -1,44 +1,36 @@
 
 <style>
-    input[type=submit] {
-      background-color: #aa3304;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    input[type=submit]:hover {
-      background-color: #1631c9;
-    }
-    .cart_btn{
-        background-color: #04AA6D;
-      color: white;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 17px;
-    }
-    .btn{
-    background:red;
-    border-radius:50%;
-    font-size:16px;
-    color:rgb(221, 208, 208);
-    margin:0 8px;
-}
-  </style>
-<section class="product">
-    <div class="containers">
-      <div class ="title">
-        <p> Our Available Products</p>
-          <h1><span>Best</span> Seller</h1>
-      </div>
+  input[type="submit"] {
+    background-color: #aa3304;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
+  input[type="submit"]:hover {
+    background-color: #1631c9;
+  }
+  .cart_btn {
+    background-color: #04aa6d;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
 
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .btn {
+    background: red;
+    border-radius: 50%;
+    font-size: 16px;
+    color: rgb(221, 208, 208);
+    margin: 0 8px;
+  }
+</style>
 
 <section class="product">
   <div class="containers">
@@ -46,6 +38,103 @@
       <p>Our Available Products</p>
       <h1><span>Best</span> Seller</h1>
     </div>
+
+    <div></div>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let prod of products">
+        <div class="card">
+          <div class="embed-responsive embed-responsive-16by9">
+            <div class="discount">9%</div>
+            <div class="label label-green">Pre-Order</div>
+
+            <div class="image">
+              <img
+                class="card-img-top embed-responsive-item"
+                src="assets\Products_Images\{{ prod.product_img }}"
+                alt="Image"
+              />
+              <!-- <img src="assets\Products_Images\apple.png" alt="Image"> -->
+            </div>
+            <!-- src\assets\Products_Images\{{ prod.product_img }} -->
+            <div class="cart-line"></div>
+
+            <div class="cart-item">
+              <ul>
+                <li>
+                  <a href=""><i class="fa fa-shopping-basket"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa fa-heart"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content">
+            <a href=""> {{ prod.product_Name }} </a><br /><br />
+            <button type="button" class="cart_btn" (click)="addCart(prod)">
+              Add To Cart
+            </button>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>
+              <span class="money">INR {{ prod.product_Price }}.</span>
+              <!--<span class="old-price">INR 150</span></p> -->
+            </p>
+          </div>
+        </div>
+        <!-- </ul> -->
+      </div>
+<<<<<<< HEAD
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+=======
+
+
+
+<section class="product">
+  <div class="containers">
+>>>>>>> master
+    <div class="title">
+      <p>Our Available Products</p>
+      <h1><span>Best</span> Seller</h1>
+    </div>
+<<<<<<< HEAD
+    <div class="row">
+      <div class="col-md-3" *ngFor="let prod of products">
+        <div class="product-image">
+          <img src="assets\Products_Images\{{ prod.product_img }}" alt="P1" />
+        </div>
+        <div class="content">
+          <h4>RS {{ prod.product_Price }}</h4>
+          <button type="button" class="btn" (click)="inc(prod)">
+            <i class="fa fa-plus"></i>
+          </button>
+          <a href=""> {{ prod.product_Name }} </a><br /><br />
+          <span>{{ prod.qnt }}</span>
+          <button type="button" class="btn" (click)="dec(prod)">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <button type="button" class="cart_btn" (click)="addCart(prod)">
+          Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+=======
 
     <div></div>
     <div class="row">
@@ -159,3 +248,4 @@
   </div>
 </section>
 
+>>>>>>> master
