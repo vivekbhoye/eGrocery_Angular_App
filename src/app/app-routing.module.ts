@@ -11,6 +11,7 @@ import { CheckitemsComponent } from './checkitems/checkitems.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { ProductsComponent } from './products/products.component';
 
+
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductupdateComponent } from './productupdate/productupdate.component';
 
@@ -39,6 +40,7 @@ const routes: Routes = [
     {path:'addcart',component:AddcartComponent},
     {path:'products',component:ProductsComponent},
     {path:'payment',component:PaymentComponent}
+
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
@@ -61,3 +63,4 @@ export const routingComponents = [
   PaymentComponent
   
 ];
+

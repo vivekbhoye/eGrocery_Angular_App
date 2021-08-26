@@ -1,11 +1,14 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 
+
+
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductinfoComponent } from '../productinfo/productinfo.component';
 import { ProductserviceService } from '../productservice.service';
 
 import { AuthService } from '../_service/auth.service';
+
 
 @Component({
   selector: 'products',
@@ -13,7 +16,9 @@ import { AuthService } from '../_service/auth.service';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  
+
+  fakepath_url!: string;
+
   products: any = [];
 
   constructor(
@@ -25,6 +30,7 @@ export class ProductsComponent implements OnInit {
 
   cartDataNull: undefined;
 
+
   ngOnInit(): void {
     this.loadProducts();
   }
@@ -35,6 +41,8 @@ export class ProductsComponent implements OnInit {
       .subscribe((data) => (this.products = data));
   }
 
+
+    
   productArray = [
     {
       product_Id: 1,
@@ -106,4 +114,5 @@ export class ProductsComponent implements OnInit {
     this.cartNumber = cartValue.length;
     this.auth.cartSubject.next(this.cartNumber);
   }
+
 }
