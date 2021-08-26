@@ -9,6 +9,7 @@ import { ProductserviceService } from '../productservice.service';
 })
 export class ProductinfoComponent implements OnInit {
   [x: string]: any;
+
   @Input()
   productDetails = {
     product_Name: '',
@@ -19,7 +20,9 @@ export class ProductinfoComponent implements OnInit {
     product_Description: ''
   }
 
-  constructor(public resturl :ProductserviceService, public router : Router) { }
+  constructor(
+    public resturl :ProductserviceService, 
+    public router : Router) { }
 
   ngOnInit(): void {
   }
@@ -31,9 +34,7 @@ export class ProductinfoComponent implements OnInit {
     this.resturl.addProduct(this.productDetails).subscribe((data:{} )=>{
       this.router.navigate(['/products']);
     })
-
   }
-  
   http: any;
 
 // onFileUpload(event:any ){
