@@ -1,52 +1,12 @@
 
-<style>
-    input[type=submit] {
-      background-color: #aa3304;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    input[type=submit]:hover {
-      background-color: #1631c9;
-    }
-    .cart_btn{
-        background-color: #04AA6D;
-      color: white;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 17px;
-    }
-    .btn{
-    background:red;
-    border-radius:50%;
-    font-size:16px;
-    color:rgb(221, 208, 208);
-    margin:0 8px;
-}
-  </style>
-<section class="product">
+<!--   
+  <section class="product">
     <div class="containers">
-      <div class ="title">
-        <p> Our Available Products</p>
-          <h1><span>Best</span> Seller</h1>
-      </div>
-
-
-
-<section class="product">
-  <div class="containers">
-    <div class="title">
+      <div class="title">
       <p>Our Available Products</p>
       <h1><span>Best</span> Seller</h1>
     </div>
-
+    
     <div></div>
     <div class="row">
       <div class="col-md-3" *ngFor="let prod of products">
@@ -62,9 +22,7 @@
                 alt="Image"
               />
               
-              <!-- <img src="assets\Products_Images\apple.png" alt="Image"> -->
             </div>
-            <!-- src\assets\Products_Images\{{ prod.product_img }} -->
             <div class="cart-line"></div>
 
             <div class="cart-item">
@@ -95,36 +53,35 @@
             </div>
             <p>
               <span class="money">INR {{ prod.product_Price }}.</span>
-              <!--<span class="old-price">INR 150</span></p> -->
             </p>
           </div>
         </div>
-        <!-- </ul> -->
       </div>
     </div>
-  </div>
-</section>
+  </div> -->
 
-      <div class="container text-center">
+<!--   
+  <div class="container text-center">
           <div class="col-md-3" *ngFor="let prod of productArray">
             <div class="product-image">
               <img src="{{prod.img}}" alt="P1">
              </div>
              <div class="content">
-                 <h4>RS {{prod.amt}}</h4>
-                 <button type="button" class="btn" (click)="inc(prod)"><i class="fa fa-plus"></i></button>
+               <h4>RS {{prod.amt}}</h4>
+               <button type="button" class="btn" (click)="inc(prod)"><i class="fa fa-plus"></i></button>
                  <span>{{prod.qnt}}</span>
                  <button type="button" class="btn"(click)="dec(prod)"><i class="fa fa-minus"></i></button>
-             </div>
+                </div>
              <button type="button" class="cart_btn" (click)="addCart(prod)">Add To Cart</button>
            </div>
       </div>
-      </div>
       
-       
-        
-            
-  </section>
+       -->
+      
+      
+      
+    <!-- </section> -->
+  
 
 <section>
   <div class="container text-center">
